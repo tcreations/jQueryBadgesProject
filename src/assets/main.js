@@ -1,8 +1,10 @@
 $(function() {
 
-$.ajax({'https://www.codeschool.com/users/motorresweb',
+$.ajax({url:'https://www.codeschool.com/users/motorresweb',
 	dataType: 'jsonp',
 	success: function(response){
-//handle response
+		$('courses.completed').html(response);
 }
+$('#badges').addClass('.course');
+$('.course').css('<h3> + 'title' + </h3>');
 });
